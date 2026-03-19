@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# Except these
+!.gitignore
+!2.0/
+!2.0/**
+!Global.asax
+!Global.asax.cs
+!App_Data/
