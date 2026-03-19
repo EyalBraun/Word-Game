@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Eyal_Braun_Projects._2._0.aspx_pages.MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Word Game</title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../Designs/MasterPage.css?v=2" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="user-info">
+            <p class="user-greeting">
+                👋 Hello <strong><%= displayUsername %></strong>
+                <%= !string.IsNullOrEmpty(displayCity) ? " from <strong>" + displayCity + "</strong>" : "" %>
+            </p> </div>
+
+        <div class="nav-logo">Word Game</div>
+
+        <div class="nav-links">
+            <a href="./homepage.aspx">Home</a>
+            <a href="./project-1-forms.aspx">Sign Up</a>
+            <a href="./login.aspx">Login</a>
+            <a href="./TUTORIAL.aspx">Tutorial</a>
+            <a href="./ScoreBoard.aspx">Score Board</a>
+            <a href="./WordsArchive.aspx">Words Archive</a>
+            <a href="./About.aspx">About</a> 
+            <a href="./Game_Stats.aspx">Game Stats</a>
+            <a href="./quiz.aspx">Quiz</a>
+
+            <% if (isAdminHeader) { %>
+                <a href="./updateData.aspx" style="color: #ffcccc;">Update Data</a>
+                <a href="./deleteData.aspx" style="color: #ffcccc;">Delete Data</a>
+                <a href="./UsersTable.aspx">Users Table</a>
+            <% } %>
+        </div>
+    </div>
+
+    <div class="nav-spacer"></div>
+    
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <div class="footer">
+        <p>Created by Eyal Braun - 2026 | Contact: <a href="mailto:cseyal881@gmail.com">cseyal881@gmail.com</a></p>
+    </div>
+</body>
+</html>

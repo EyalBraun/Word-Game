@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Eyal_Braun_Projects._2._0.aspx_pages.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+<link rel ="stylesheet" href ="../Designs/MasterPage.css" />
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="nav-logo">Word Game</div>
+
+    <div class="nav-links">
+        <a href="./homepage.aspx">Home</a>
+        <a href="./project-1-forms.aspx">Sign Up</a>
+        <a href="./TUTORIAL.aspx">Tutorial</a>
+        <a href="./ScoreBoard.aspx">Score Board</a>
+        <a href="./WordsArchive.aspx">Words Archive</a>
+        <a href="./About.aspx">About</a>  <!-- Added About -->
+        <a href="login.aspx">Log In</a>
+    </div>
+</div>
+
+<div class="nav-spacer"></div>
+
+<hr class="nav-divider" />
+
+<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+<br /><br /><br /><br /><br />
+<p>This Website was created by Eyal Braun -17.11.25</p>
+<p>for contacting the creator of the website :</p>
+<a href="https://mail.google.com/mail/?view=cm&to=cseyal881@gmail.com">Send Email</a>
+
+</body>
+</html>

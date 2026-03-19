@@ -1,0 +1,77 @@
+﻿/* DeleteStyles.css */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.delete-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 450px;
+    width: 100%;
+    border-top: 6px solid #d63031; /* Warning Red color */
+}
+
+h2 {
+    margin-top: 0;
+    color: #2d3436;
+}
+
+.subtitle {
+    color: #636e72;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+    .input-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #2d3436;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #dfe6e9;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+.btn-delete {
+    width: 100%;
+    background-color: #d63031;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .btn-delete:hover {
+        background-color: #b02324;
+    }
+
+.footer-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+    .footer-links a {
+        color: #0984e3;
+        text-decoration: none;
+        font-size: 14px;
+    }

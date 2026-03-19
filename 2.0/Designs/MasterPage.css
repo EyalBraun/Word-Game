@@ -1,0 +1,117 @@
+﻿/* MasterPage.css */
+
+/* 1. Global Reset & Body Setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Keeps footer at the bottom */
+}
+
+/* 2. The Fixed Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #538d4e; /* Wordle Green */
+    padding: 14px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.nav-logo {
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 0; /* Removed margin to keep it perfectly centered vertically */
+}
+
+/* 3. The Links Container */
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Controls the exact space between the hitboxes */
+    align-items: center;
+}
+
+    /* 4. The Links Themselves (The Bulletproof Fix) */
+    .nav-links a {
+        display: block; /* CRITICAL: Forces the invisible hitbox to exactly match the padding */
+        color: #ffffff;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 17px;
+        font-weight: 500;
+        white-space: nowrap; /* Keeps two-word links together */
+        transition: 0.2s background;
+        padding: 8px 12px;
+        border-radius: 6px;
+        line-height: 1; /* Prevents the text height from bleeding into the next link */
+    }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+/* 5. Spacer so content isn't hidden behind the fixed navbar */
+.nav-spacer {
+    height: 80px;
+    width: 100%;
+}
+
+/* 6. User Greeting Badge */
+.user-greeting {
+    font-size: 0.95rem;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
+}
+
+    .user-greeting strong {
+        color: #ffffff;
+        font-weight: 700;
+        margin: 0 5px;
+    }
+
+/* 7. Content Area Expansion */
+form, div[id*="ContentPlaceHolder"] {
+    flex: 1; /* Tells the main content to push the footer down */
+}
+
+/* 8. Footer */
+.footer {
+    background-color: #3a3a3c;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+    .footer a {
+        color: #6aaa64;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }

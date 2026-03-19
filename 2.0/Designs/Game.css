@@ -1,0 +1,211 @@
+﻿a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #00ffae;
+    background: rgba(0, 255, 174, 0.1);
+    border: 2px solid #00ffae;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #00ffae33;
+}
+
+
+body {
+    background: radial-gradient(circle at top left, #1a1a1d, #121213);
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Title */
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    color: #00ffae;
+    text-shadow: 0 0 10px #00ffae33, 0 0 25px #00ffae55;
+}
+
+/* ==========================================================
+   INPUT + BUTTONS
+   ========================================================== */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    background: #1e1e20;
+    border: 2px solid #3a3a3c;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 8px;
+    padding: 10px 15px;
+    outline: none;
+    width: 150px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+    input[type="text"]:focus {
+        border-color: #00ffae;
+        box-shadow: 0 0 10px #00ffae66;
+    }
+
+button {
+    background: linear-gradient(135deg, #00ffae, #00b3ff);
+    border: none;
+    color: #121213;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#a {
+    margin-top: 10px;
+}
+
+/* Message text */
+#h {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    height: 25px;
+    color: #b6b6b6;
+    text-shadow: 0 0 8px #00b3ff44;
+}
+
+/* ==========================================================
+   WORDLE GRID (6 rows × 5 columns)
+   ========================================================== */
+#wordle-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Wordle tile */
+.grid-tile {
+    width: 65px;
+    height: 65px;
+    background-color: #121213;
+    border: 2px solid #3a3a3c;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+}
+
+    /* Color states */
+    .grid-tile.correct {
+        background: #00c851 !important;
+        border-color: #00c851;
+        box-shadow: 0 0 15px #00c851aa;
+    }
+
+    .grid-tile.present {
+        background: #ffbb33 !important;
+        border-color: #ffbb33;
+        box-shadow: 0 0 15px #ffbb33aa;
+    }
+
+    .grid-tile.absent {
+        background: #3a3a3c !important;
+        opacity: 0.65;
+    }
+
+/* Flip animation */
+@keyframes flip {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    50% {
+        transform: rotateX(90deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.grid-tile.flip {
+    animation: flip 0.5s ease;
+}
+
+/* ==========================================================
+   KEYBOARD
+   ========================================================== */
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Keyboard keys */
+.key-tile {
+    width: 45px;
+    height: 60px;
+    background: #2c2c2c;
+    border: 2px solid #3a3a3c;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .key-tile:hover {
+        background: #3a3a3a;
+    }
+
+/* ==========================================================
+   CONFETTI
+   ========================================================== */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(45deg, #00ffae, #00b3ff);
+    border-radius: 50%;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}

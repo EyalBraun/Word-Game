@@ -1,0 +1,78 @@
+﻿/* UpdateData.css */
+
+/* Main container styling */
+.update-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+    /* Heading and paragraph styles */
+    .update-container h2 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .update-container p {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #444;
+    }
+
+    /* Input and Select box styling */
+    .update-container input[type="text"],
+    .update-container select {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        box-sizing: border-box; /* Ensures padding doesn't break width */
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        /* Focus effects for a more interactive feel */
+        .update-container input[type="text"]:focus,
+        .update-container select:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+        }
+
+    /* Submit button styling */
+    .update-container input[type="submit"] {
+        width: 100%;
+        background-color: #3498db;
+        color: white;
+        padding: 14px;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+
+        .update-container input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        .update-container input[type="submit"]:active {
+            transform: scale(0.98);
+        }
+
+/* Specific styling for labels/text markers */
+.filter-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}

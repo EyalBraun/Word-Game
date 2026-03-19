@@ -1,0 +1,23 @@
+﻿table.styled-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+}
+
+    table.styled-table th,
+    table.styled-table td {
+        border: 1px solid #ccc;
+        padding: 6px 8px;
+        text-align: left;
+    }
+
+    table.styled-table th {
+        background-color: #4CAF50; /* green headers */
+        color: white;
+        font-weight: bold;
+    }
+
+    table.styled-table tr:nth-child(even) {
+        background-color: #fafafa;
+    }
